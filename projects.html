@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="PXCSS.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <script defer src="scripts.js"></script>
+    <script>
+        if (sessionStorage.getItem('status') != null) {
+    console.log('You are logged in');
+}
+else{
+    console.log('You are not logged in');
+    window.location.assign('index.html');
+    alert('Please log in');
+}
+    </script>
+
+</head>
+<body>
+    <header>
+        <h1 class="logo">Max Tech</h1>
+        <div class="dropdown">
+            <button class="dropbtn">Menu &nbsp; <img src="images/menu.png" alt="Menu Icon" id="menu"></button>
+            <div class="dropdown-content">
+                <a onclick="setGcxTrue()" href="home.html">Home &nbsp; <img src="images/home.png" alt="Home Icon" id="home"></a>
+                <a href="projects.html">Projects &nbsp; <img src="images/projects.png" alt="Projects Icon" id="projects"></a>
+                <a href="contact.html">Contact &nbsp; <img src="images/contact.png" alt="Contact Icon" id="contact"></a>
+                <a onclick="logout()" href="#">Logout &nbsp; <img src="images/shutdown.png" alt="Logout Icon" id="logout"></a>
+            </div>
+        </div>
+    </header>
+
+    <h2>Which Project would you like to see next?</h2>
+
+    <div class="content">
+        <form method="GET">
+        <div class="project">
+            <img src="images/techproj1.jpg" alt="Projects Image" class="techproj">
+            <input type=radio name="project" id="mobile" class="selection" value="Mobile">Mobile App</input>
+            <button type="submit" id= "submit">Submit</button>
+        </div>
+
+        <div class="project">
+            <img src="images/techproj2.jpg" alt="Projects Image" class="techproj">
+            <input type=radio name="project" id="hardware" class="selection" value="Hardware" href="location.href='mxlane87.github.io/PXapp/projects.html?project=HARDWARE'">Hardware</input>
+            <button type="submit" id= "submit">Submit</button>
+        </div>
+
+        <div class="project">
+            <img src="images/techproj3.jpg" alt="Projects Image" class="techproj">
+            <input type=radio name="project" id="software" class="selection" value="Software" href="location.href='mxlane87.github.io/PXapp/projects.html?project=SOFTWARE'">Software</input>
+            <button type="submit" id= "submit">Submit</button>
+        </div>
+
+        
+        </form> 
+    </div>
+
+</body>
+</html>

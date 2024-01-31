@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="PXCSS.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <script defer src="scripts.js"></script>
+    <script>
+        if (sessionStorage.getItem('status') != null) {
+            console.log('You are logged in');
+        }
+        else{
+            console.log('You are not logged in');
+            window.location.assign('index.html');
+            alert('Please log in');
+        }
+    </script>
+        
+</head>
+<body>
+    <script>
+        function logout() {
+          sessionStorage.removeItem('status');
+          localStorage.removeItem=('user');
+          window.aptrinsic('reset'); 
+          window.location.assign("index.html");
+        }
+
+        if (sessionStorage.getItem('status') != null) {
+            console.log('You are logged in');
+        }
+        else{
+            console.log('You are not logged in');
+            window.location.assign('index.html');
+            alert('Please log in');
+        }
+    </script>
+
+    <header>
+        <h1 class="logo">Max Tech</h1>
+        <div class="dropdown">
+            <button class="dropbtn">Menu &nbsp; <img src="images/menu.png" alt="Menu Icon" id="menu"></button>
+            <div class="dropdown-content">
+                <a href="home.html">Home &nbsp; <img src="images/home.png" alt="Home Icon" id="home"></a>
+                <a href="projects.html">Projects &nbsp; <img src="images/projects.png" alt="Projects Icon" id="projects"></a>
+                <a href="contact.html">Contact &nbsp; <img src="images/contact.png" alt="Contact Icon" id="contact"></a>
+                <a onclick="logout()" href="#">Logout &nbsp; <img src="images/shutdown.png" alt="Logout Icon" id="logout"></a>
+            </div>
+        </div>
+    </header>
+
+    <h2>Contact Us</h2>
+    <div id="formcontain">
+        <div class="form">
+            <form action="/">
+            
+            <div class="item">
+                <label for="name">Name<span>*</span></label>
+                <input id="name" type="text" name="name" required/>
+            </div>
+            <div class="item">
+                <label for="email">Email Address<span>*</span></label>
+                <input id="email" type="email" name="email" required/>
+            </div>
+            <div class="item">
+                <label for="instructions">Message</label>
+                <textarea id="instructions" rows="3"></textarea>
+            </div>
+            <div class="btn-block">
+                <button type="submit" id= "submit" href="/">Submit</button>
+              </div>
+            </form>  
+            <div class="item">
+                <label for="linktest">Link Test</label>
+                <a clicktracking=off href="https://www.google.com" id="linktest">Test Link</a>
+            </div>
+        </div> 
+    </div>   
+</body>
+</html>
